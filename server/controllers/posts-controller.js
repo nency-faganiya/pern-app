@@ -40,7 +40,6 @@ const getEvery = async (req, res, next) => {
 }
 
 const updatePost = async (req, res, next) => {
-    // console.log(updatedPost);
     let values = [ 
         req.body.title, 
         req.body.description,
@@ -55,7 +54,7 @@ const updatePost = async (req, res, next) => {
     }else{
         try{
             results = await db.query("UPDATE post SET title=$1, description=$2, tags=$3, image=$4, user_id=$5, updated_at=now() WHERE id=$6 Returning *", values);
-            res.status(200).json(results.rows);
+            return res.status(200).json(results.rows);
         }catch(err){
             console.log(err);
         }

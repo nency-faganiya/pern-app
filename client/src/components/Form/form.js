@@ -21,7 +21,7 @@ const Form = ({currentId, setCurrentId}) => {
         title: '',
         description: '',
         tags: '',
-        user_id: 0,
+        user_id: null,
         image: '',
     })
 
@@ -77,7 +77,7 @@ const Form = ({currentId, setCurrentId}) => {
             title: '',
             description: '',
             tags: '',
-            user_id: 0,
+            user_id: null,
             image: ''
         })
     }
